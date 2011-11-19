@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0D1478188F000075AC /* UIKit.framework */; };
+		84DA2B101478188F000075AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0F1478188F000075AC /* Foundation.framework */; };
+		84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B111478188F000075AC /* CoreGraphics.framework */; };
+		84DA2B1414781890000075AC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B131478188F000075AC /* CoreData.framework */; };
+		84DA2B1A14781890000075AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B1814781890000075AC /* InfoPlist.strings */; };
+		84DA2B1C14781890000075AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B1B14781890000075AC /* main.m */; };
+		84DA2B2014781890000075AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B1F14781890000075AC /* AppDelegate.m */; };
+		84DA2B2314781890000075AC /* Skyrim_Crafting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B2114781890000075AC /* Skyrim_Crafting.xcdatamodeld */; };
+		84DA2B2614781890000075AC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B2514781890000075AC /* MasterViewController.m */; };
+		84DA2B2914781890000075AC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B2814781890000075AC /* DetailViewController.m */; };
+		84DA2B2C14781890000075AC /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B2A14781890000075AC /* MasterViewController.xib */; };
+		84DA2B2F14781890000075AC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B2D14781890000075AC /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84DA2B091478188F000075AC /* Skyrim Crafting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skyrim Crafting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DA2B0D1478188F000075AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84DA2B0F1478188F000075AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84DA2B111478188F000075AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84DA2B131478188F000075AC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84DA2B1714781890000075AC /* Skyrim Crafting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Skyrim Crafting-Info.plist"; sourceTree = "<group>"; };
+		84DA2B1914781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84DA2B1B14781890000075AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84DA2B1D14781890000075AC /* Skyrim Crafting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Skyrim Crafting-Prefix.pch"; sourceTree = "<group>"; };
+		84DA2B1E14781890000075AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84DA2B1F14781890000075AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84DA2B2214781890000075AC /* Skyrim_Crafting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skyrim_Crafting.xcdatamodel; sourceTree = "<group>"; };
+		84DA2B2414781890000075AC /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		84DA2B2514781890000075AC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		84DA2B2714781890000075AC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		84DA2B2814781890000075AC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		84DA2B2B14781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		84DA2B2E14781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84DA2B061478188F000075AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */,
+				84DA2B101478188F000075AC /* Foundation.framework in Frameworks */,
+				84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */,
+				84DA2B1414781890000075AC /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84DA2AFE1478188F000075AC = {
+			isa = PBXGroup;
+			children = (
+				84DA2B1514781890000075AC /* Skyrim Crafting */,
+				84DA2B0C1478188F000075AC /* Frameworks */,
+				84DA2B0A1478188F000075AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84DA2B0A1478188F000075AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84DA2B091478188F000075AC /* Skyrim Crafting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84DA2B0C1478188F000075AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84DA2B0D1478188F000075AC /* UIKit.framework */,
+				84DA2B0F1478188F000075AC /* Foundation.framework */,
+				84DA2B111478188F000075AC /* CoreGraphics.framework */,
+				84DA2B131478188F000075AC /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84DA2B1514781890000075AC /* Skyrim Crafting */ = {
+			isa = PBXGroup;
+			children = (
+				84DA2B1E14781890000075AC /* AppDelegate.h */,
+				84DA2B1F14781890000075AC /* AppDelegate.m */,
+				84DA2B2414781890000075AC /* MasterViewController.h */,
+				84DA2B2514781890000075AC /* MasterViewController.m */,
+				84DA2B2714781890000075AC /* DetailViewController.h */,
+				84DA2B2814781890000075AC /* DetailViewController.m */,
+				84DA2B2A14781890000075AC /* MasterViewController.xib */,
+				84DA2B2D14781890000075AC /* DetailViewController.xib */,
+				84DA2B2114781890000075AC /* Skyrim_Crafting.xcdatamodeld */,
+				84DA2B1614781890000075AC /* Supporting Files */,
+			);
+			path = "Skyrim Crafting";
+			sourceTree = "<group>";
+		};
+		84DA2B1614781890000075AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84DA2B1714781890000075AC /* Skyrim Crafting-Info.plist */,
+				84DA2B1814781890000075AC /* InfoPlist.strings */,
+				84DA2B1B14781890000075AC /* main.m */,
+				84DA2B1D14781890000075AC /* Skyrim Crafting-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84DA2B081478188F000075AC /* Skyrim Crafting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DA2B3214781890000075AC /* Build configuration list for PBXNativeTarget "Skyrim Crafting" */;
+			buildPhases = (
+				84DA2B051478188F000075AC /* Sources */,
+				84DA2B061478188F000075AC /* Frameworks */,
+				84DA2B071478188F000075AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Skyrim Crafting";
+			productName = "Skyrim Crafting";
+			productReference = 84DA2B091478188F000075AC /* Skyrim Crafting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84DA2B001478188F000075AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 84DA2B031478188F000075AC /* Build configuration list for PBXProject "Skyrim Crafting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84DA2AFE1478188F000075AC;
+			productRefGroup = 84DA2B0A1478188F000075AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84DA2B081478188F000075AC /* Skyrim Crafting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84DA2B071478188F000075AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DA2B1A14781890000075AC /* InfoPlist.strings in Resources */,
+				84DA2B2C14781890000075AC /* MasterViewController.xib in Resources */,
+				84DA2B2F14781890000075AC /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84DA2B051478188F000075AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DA2B1C14781890000075AC /* main.m in Sources */,
+				84DA2B2014781890000075AC /* AppDelegate.m in Sources */,
+				84DA2B2314781890000075AC /* Skyrim_Crafting.xcdatamodeld in Sources */,
+				84DA2B2614781890000075AC /* MasterViewController.m in Sources */,
+				84DA2B2914781890000075AC /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84DA2B1814781890000075AC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DA2B1914781890000075AC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84DA2B2A14781890000075AC /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DA2B2B14781890000075AC /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		84DA2B2D14781890000075AC /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DA2B2E14781890000075AC /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84DA2B3014781890000075AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84DA2B3114781890000075AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84DA2B3314781890000075AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Skyrim Crafting/Skyrim Crafting-Prefix.pch";
+				INFOPLIST_FILE = "Skyrim Crafting/Skyrim Crafting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84DA2B3414781890000075AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Skyrim Crafting/Skyrim Crafting-Prefix.pch";
+				INFOPLIST_FILE = "Skyrim Crafting/Skyrim Crafting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84DA2B031478188F000075AC /* Build configuration list for PBXProject "Skyrim Crafting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DA2B3014781890000075AC /* Debug */,
+				84DA2B3114781890000075AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DA2B3214781890000075AC /* Build configuration list for PBXNativeTarget "Skyrim Crafting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DA2B3314781890000075AC /* Debug */,
+				84DA2B3414781890000075AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84DA2B2114781890000075AC /* Skyrim_Crafting.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84DA2B2214781890000075AC /* Skyrim_Crafting.xcdatamodel */,
+			);
+			currentVersion = 84DA2B2214781890000075AC /* Skyrim_Crafting.xcdatamodel */;
+			path = Skyrim_Crafting.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84DA2B001478188F000075AC /* Project object */;
+}
