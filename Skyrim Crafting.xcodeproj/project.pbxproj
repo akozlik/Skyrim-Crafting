@@ -19,6 +19,9 @@
 		84DA2B2914781890000075AC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B2814781890000075AC /* DetailViewController.m */; };
 		84DA2B2C14781890000075AC /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B2A14781890000075AC /* MasterViewController.xib */; };
 		84DA2B2F14781890000075AC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B2D14781890000075AC /* DetailViewController.xib */; };
+		84DA2B4714782855000075AC /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B4614782855000075AC /* Ingredient.m */; };
+		84DA2B4C1478289A000075AC /* Potion.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B4B1478289A000075AC /* Potion.m */; };
+		84DA2B4F147828AF000075AC /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B4E147828AF000075AC /* Effect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,12 @@
 		84DA2B2814781890000075AC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		84DA2B2B14781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		84DA2B2E14781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		84DA2B4514782855000075AC /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
+		84DA2B4614782855000075AC /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
+		84DA2B4A1478289A000075AC /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Potion.h; sourceTree = "<group>"; };
+		84DA2B4B1478289A000075AC /* Potion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Potion.m; sourceTree = "<group>"; };
+		84DA2B4D147828AF000075AC /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
+		84DA2B4E147828AF000075AC /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +106,7 @@
 				84DA2B2A14781890000075AC /* MasterViewController.xib */,
 				84DA2B2D14781890000075AC /* DetailViewController.xib */,
 				84DA2B2114781890000075AC /* Skyrim_Crafting.xcdatamodeld */,
+				84DA2B491478287D000075AC /* Data Models */,
 				84DA2B1614781890000075AC /* Supporting Files */,
 			);
 			path = "Skyrim Crafting";
@@ -111,6 +121,19 @@
 				84DA2B1D14781890000075AC /* Skyrim Crafting-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84DA2B491478287D000075AC /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				84DA2B4D147828AF000075AC /* Effect.h */,
+				84DA2B4E147828AF000075AC /* Effect.m */,
+				84DA2B4A1478289A000075AC /* Potion.h */,
+				84DA2B4B1478289A000075AC /* Potion.m */,
+				84DA2B4514782855000075AC /* Ingredient.h */,
+				84DA2B4614782855000075AC /* Ingredient.m */,
+			);
+			name = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +204,9 @@
 				84DA2B2314781890000075AC /* Skyrim_Crafting.xcdatamodeld in Sources */,
 				84DA2B2614781890000075AC /* MasterViewController.m in Sources */,
 				84DA2B2914781890000075AC /* DetailViewController.m in Sources */,
+				84DA2B4714782855000075AC /* Ingredient.m in Sources */,
+				84DA2B4C1478289A000075AC /* Potion.m in Sources */,
+				84DA2B4F147828AF000075AC /* Effect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +324,7 @@
 				84DA2B3414781890000075AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

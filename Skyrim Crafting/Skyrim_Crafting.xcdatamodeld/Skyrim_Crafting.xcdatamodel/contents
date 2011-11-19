@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Effect" syncable="YES">
+    <entity name="Effect" representedClassName="Effect" syncable="YES">
         <attribute name="effect" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ingredients" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="effects" inverseEntity="Ingredient" syncable="YES"/>
     </entity>
     <entity name="Event">
         <attribute name="timeStamp" optional="YES" attributeType="Date"/>
     </entity>
-    <entity name="Ingredient" syncable="YES">
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ingredient" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="effects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Effect" inverseName="ingredients" inverseEntity="Effect" syncable="YES"/>
         <relationship name="potions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Potion" inverseName="ingredients" inverseEntity="Potion" syncable="YES"/>
     </entity>
-    <entity name="Potion" syncable="YES">
+    <entity name="Potion" representedClassName="Potion" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="potion" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ingredients" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="potions" inverseEntity="Ingredient" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Ingredient" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Ingredient" positionX="160" positionY="192" width="128" height="75"/>
         <element name="Potion" positionX="160" positionY="192" width="128" height="90"/>
         <element name="Effect" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
