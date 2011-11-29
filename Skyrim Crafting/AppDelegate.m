@@ -42,7 +42,6 @@
     masterViewController.managedObjectContext = self.managedObjectContext;
     navController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
     [tabViews addObject:navController];
-    
 
     self.tabController = [[UITabBarController alloc] init];
     [self.tabController setViewControllers:tabViews];
