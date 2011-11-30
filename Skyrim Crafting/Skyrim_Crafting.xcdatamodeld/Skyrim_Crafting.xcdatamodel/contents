@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Component" syncable="YES">
+    <entity name="Component" representedClassName="Component" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="Equipment" syncable="YES">
+    <entity name="Equipment" representedClassName="Equipment" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,7 +30,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ingredients" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Ingredient" syncable="YES"/>
     </entity>
-    <entity name="Recipe" syncable="YES">
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES">
         <attribute name="quanity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="component" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Component" syncable="YES"/>
         <relationship name="equipment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Equipment" syncable="YES"/>

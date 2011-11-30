@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "PotionsViewController.h"
+#import "IngredientsViewController.h"
 #import "MasterViewController.h"
 
 @implementation AppDelegate
@@ -38,9 +40,22 @@
     NSMutableArray *tabViews = [[NSMutableArray alloc] init];;
     UINavigationController *navController;
     
+    PotionsViewController *potionsViewController = [[[PotionsViewController alloc] init] autorelease];
+    potionsViewController.managedObjectContext = self.managedObjectContext;
+    navController = [[UINavigationController alloc] initWithRootViewController:potionsViewController];
+    navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    [tabViews addObject:navController];
+    
+    IngredientsViewController *ingredientsViewController = [[[IngredientsViewController alloc] init] autorelease];
+    ingredientsViewController.managedObjectContext = self.managedObjectContext;
+    navController = [[UINavigationController alloc] initWithRootViewController:ingredientsViewController];
+    navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    [tabViews addObject:navController];
+    
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
     masterViewController.managedObjectContext = self.managedObjectContext;
     navController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    navController.navigationBar.tintColor = [UIColor darkGrayColor];
     [tabViews addObject:navController];
 
     self.tabController = [[UITabBarController alloc] init];
@@ -156,8 +171,21 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Skyrim_Crafting.sqlite"];
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
     
+    NSString *storePath = [documentsDirectoryPath stringByAppendingPathComponent:@"Skyrim_Crafting.sqlite"];
+    NSURL *storeURL = [NSURL fileURLWithPath:storePath];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:storePath]) {
+        NSString *defaultStorePath = [[NSBundle mainBundle] 
+                                      pathForResource:@"Skyrim_Crafting" ofType:@"sqlite"];
+        if (defaultStorePath) {
+            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+        }
+    }
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])

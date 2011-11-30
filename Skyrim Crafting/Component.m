@@ -1,18 +1,18 @@
 //
-//  Effect.m
+//  Component.m
 //  Skyrim Crafting
 //
 //  Created by Andrew on 11/29/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Effect.h"
-#import "Ingredient.h"
+#import "Component.h"
 
 
-@implementation Effect
+@implementation Component
 
 @dynamic name;
-@dynamic ingredients;
+@dynamic value;
+@dynamic weight;
 
 @end

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8464134F1485D00000922D4A /* PotionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464134E1485D00000922D4A /* PotionsViewController.m */; };
+		846413531485D16800922D4A /* IngredientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413521485D16800922D4A /* IngredientsViewController.m */; };
+		846413631485EE0100922D4A /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413621485EE0100922D4A /* Component.m */; };
+		846413661485EE0100922D4A /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413651485EE0100922D4A /* Ingredient.m */; };
+		8464136C1485EE0100922D4A /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464136B1485EE0100922D4A /* Recipe.m */; };
+		8464136F1485EE0100922D4A /* Equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464136E1485EE0100922D4A /* Equipment.m */; };
+		846413721485EE4A00922D4A /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413711485EE4A00922D4A /* Effect.m */; };
+		846413751485EF3300922D4A /* IngredientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413741485EF3300922D4A /* IngredientDetailViewController.m */; };
+		846413771485F56D00922D4A /* Skyrim_Crafting.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 846413761485F56D00922D4A /* Skyrim_Crafting.sqlite */; };
 		84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0D1478188F000075AC /* UIKit.framework */; };
 		84DA2B101478188F000075AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0F1478188F000075AC /* Foundation.framework */; };
 		84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B111478188F000075AC /* CoreGraphics.framework */; };
@@ -19,12 +28,26 @@
 		84DA2B2914781890000075AC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B2814781890000075AC /* DetailViewController.m */; };
 		84DA2B2C14781890000075AC /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B2A14781890000075AC /* MasterViewController.xib */; };
 		84DA2B2F14781890000075AC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DA2B2D14781890000075AC /* DetailViewController.xib */; };
-		84DA2B4714782855000075AC /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B4614782855000075AC /* Ingredient.m */; };
-		84DA2B4C1478289A000075AC /* Potion.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B4B1478289A000075AC /* Potion.m */; };
-		84DA2B4F147828AF000075AC /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA2B4E147828AF000075AC /* Effect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8464134D1485D00000922D4A /* PotionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotionsViewController.h; sourceTree = "<group>"; };
+		8464134E1485D00000922D4A /* PotionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PotionsViewController.m; sourceTree = "<group>"; };
+		846413511485D16800922D4A /* IngredientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsViewController.h; sourceTree = "<group>"; };
+		846413521485D16800922D4A /* IngredientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsViewController.m; sourceTree = "<group>"; };
+		846413611485EE0100922D4A /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		846413621485EE0100922D4A /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		846413641485EE0100922D4A /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
+		846413651485EE0100922D4A /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
+		8464136A1485EE0100922D4A /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		8464136B1485EE0100922D4A /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		8464136D1485EE0100922D4A /* Equipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Equipment.h; sourceTree = "<group>"; };
+		8464136E1485EE0100922D4A /* Equipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Equipment.m; sourceTree = "<group>"; };
+		846413701485EE4A00922D4A /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
+		846413711485EE4A00922D4A /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
+		846413731485EF3300922D4A /* IngredientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientDetailViewController.h; sourceTree = "<group>"; };
+		846413741485EF3300922D4A /* IngredientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientDetailViewController.m; sourceTree = "<group>"; };
+		846413761485F56D00922D4A /* Skyrim_Crafting.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skyrim_Crafting.sqlite; sourceTree = "<group>"; };
 		84DA2B091478188F000075AC /* Skyrim Crafting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skyrim Crafting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DA2B0D1478188F000075AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DA2B0F1478188F000075AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,12 +66,6 @@
 		84DA2B2814781890000075AC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		84DA2B2B14781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		84DA2B2E14781890000075AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
-		84DA2B4514782855000075AC /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
-		84DA2B4614782855000075AC /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
-		84DA2B4A1478289A000075AC /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Potion.h; sourceTree = "<group>"; };
-		84DA2B4B1478289A000075AC /* Potion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Potion.m; sourceTree = "<group>"; };
-		84DA2B4D147828AF000075AC /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
-		84DA2B4E147828AF000075AC /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +120,12 @@
 				84DA2B2514781890000075AC /* MasterViewController.m */,
 				84DA2B2714781890000075AC /* DetailViewController.h */,
 				84DA2B2814781890000075AC /* DetailViewController.m */,
+				8464134D1485D00000922D4A /* PotionsViewController.h */,
+				8464134E1485D00000922D4A /* PotionsViewController.m */,
+				846413511485D16800922D4A /* IngredientsViewController.h */,
+				846413521485D16800922D4A /* IngredientsViewController.m */,
+				846413731485EF3300922D4A /* IngredientDetailViewController.h */,
+				846413741485EF3300922D4A /* IngredientDetailViewController.m */,
 				84DA2B2A14781890000075AC /* MasterViewController.xib */,
 				84DA2B2D14781890000075AC /* DetailViewController.xib */,
 				84DA2B2114781890000075AC /* Skyrim_Crafting.xcdatamodeld */,
@@ -115,6 +138,7 @@
 		84DA2B1614781890000075AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				846413761485F56D00922D4A /* Skyrim_Crafting.sqlite */,
 				84DA2B1714781890000075AC /* Skyrim Crafting-Info.plist */,
 				84DA2B1814781890000075AC /* InfoPlist.strings */,
 				84DA2B1B14781890000075AC /* main.m */,
@@ -126,12 +150,16 @@
 		84DA2B491478287D000075AC /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				84DA2B4D147828AF000075AC /* Effect.h */,
-				84DA2B4E147828AF000075AC /* Effect.m */,
-				84DA2B4A1478289A000075AC /* Potion.h */,
-				84DA2B4B1478289A000075AC /* Potion.m */,
-				84DA2B4514782855000075AC /* Ingredient.h */,
-				84DA2B4614782855000075AC /* Ingredient.m */,
+				846413701485EE4A00922D4A /* Effect.h */,
+				846413711485EE4A00922D4A /* Effect.m */,
+				8464136D1485EE0100922D4A /* Equipment.h */,
+				8464136E1485EE0100922D4A /* Equipment.m */,
+				8464136A1485EE0100922D4A /* Recipe.h */,
+				8464136B1485EE0100922D4A /* Recipe.m */,
+				846413641485EE0100922D4A /* Ingredient.h */,
+				846413651485EE0100922D4A /* Ingredient.m */,
+				846413611485EE0100922D4A /* Component.h */,
+				846413621485EE0100922D4A /* Component.m */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -189,6 +217,7 @@
 				84DA2B1A14781890000075AC /* InfoPlist.strings in Resources */,
 				84DA2B2C14781890000075AC /* MasterViewController.xib in Resources */,
 				84DA2B2F14781890000075AC /* DetailViewController.xib in Resources */,
+				846413771485F56D00922D4A /* Skyrim_Crafting.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +233,14 @@
 				84DA2B2314781890000075AC /* Skyrim_Crafting.xcdatamodeld in Sources */,
 				84DA2B2614781890000075AC /* MasterViewController.m in Sources */,
 				84DA2B2914781890000075AC /* DetailViewController.m in Sources */,
-				84DA2B4714782855000075AC /* Ingredient.m in Sources */,
-				84DA2B4C1478289A000075AC /* Potion.m in Sources */,
-				84DA2B4F147828AF000075AC /* Effect.m in Sources */,
+				8464134F1485D00000922D4A /* PotionsViewController.m in Sources */,
+				846413531485D16800922D4A /* IngredientsViewController.m in Sources */,
+				846413631485EE0100922D4A /* Component.m in Sources */,
+				846413661485EE0100922D4A /* Ingredient.m in Sources */,
+				8464136C1485EE0100922D4A /* Recipe.m in Sources */,
+				8464136F1485EE0100922D4A /* Equipment.m in Sources */,
+				846413721485EE4A00922D4A /* Effect.m in Sources */,
+				846413751485EF3300922D4A /* IngredientDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

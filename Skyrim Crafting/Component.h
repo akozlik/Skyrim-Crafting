@@ -1,5 +1,5 @@
 //
-//  Effect.h
+//  Component.h
 //  Skyrim Crafting
 //
 //  Created by Andrew on 11/29/11.
@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Ingredient;
 
-@interface Effect : NSManagedObject
+@interface Component : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) Ingredient *ingredients;
+@property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSNumber * weight;
 
 @end
