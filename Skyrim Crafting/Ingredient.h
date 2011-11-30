@@ -1,0 +1,29 @@
+//
+//  Ingredient.h
+//  Skyrim Crafting
+//
+//  Created by Andrew on 11/29/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class Effect;
+
+@interface Ingredient : NSManagedObject
+
+@property (nonatomic, retain) NSNumber * effect_1;
+@property (nonatomic, retain) NSNumber * effect_2;
+@property (nonatomic, retain) NSNumber * effect_3;
+@property (nonatomic, retain) NSNumber * effect_4;
+@property (nonatomic, retain) NSString * location;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSNumber * weight;
+@property (nonatomic, retain) Effect *primary;
+@property (nonatomic, retain) Effect *quaternary;
+@property (nonatomic, retain) Effect *secondary;
+@property (nonatomic, retain) Effect *tertiary;
+
+@end
