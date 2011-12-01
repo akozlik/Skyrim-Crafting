@@ -7,6 +7,7 @@
 //
 
 #import "PotionsViewController.h"
+#import "PotionDetailViewController.h"
 
 
 @implementation PotionsViewController
@@ -198,14 +199,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    NSError *error;
+    PotionDetailViewController *detail = [[PotionDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    
+    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSString *potionName = [managedObject valueForKey:@"name"];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Ingredient" inManagedObjectContext:self.managedObjectContext];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                                     @"primary.name = %@ or secondary.name = %@ or tertiary.name = %@ or quaternary.name = %@", potionName, potionName,potionName, potionName];
+    
+    [request setPredicate:predicate];
+    [request setEntity:entity];
+
+    NSArray *ingredientsArray = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    [predicate release];
+
+    detail.ingredients = ingredientsArray;
+    detail.title = [managedObject valueForKey:@"name"];
+    [self.navigationController pushViewController:detail animated:YES];
+    
 }
 
 @end

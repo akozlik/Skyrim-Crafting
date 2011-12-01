@@ -16,6 +16,7 @@
 		846413721485EE4A00922D4A /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413711485EE4A00922D4A /* Effect.m */; };
 		846413751485EF3300922D4A /* IngredientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413741485EF3300922D4A /* IngredientDetailViewController.m */; };
 		846413771485F56D00922D4A /* Skyrim_Crafting.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 846413761485F56D00922D4A /* Skyrim_Crafting.sqlite */; };
+		848D9B2614871D9D004AD149 /* PotionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9B2514871D9D004AD149 /* PotionDetailViewController.m */; };
 		84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0D1478188F000075AC /* UIKit.framework */; };
 		84DA2B101478188F000075AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0F1478188F000075AC /* Foundation.framework */; };
 		84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B111478188F000075AC /* CoreGraphics.framework */; };
@@ -48,6 +49,8 @@
 		846413731485EF3300922D4A /* IngredientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientDetailViewController.h; sourceTree = "<group>"; };
 		846413741485EF3300922D4A /* IngredientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientDetailViewController.m; sourceTree = "<group>"; };
 		846413761485F56D00922D4A /* Skyrim_Crafting.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skyrim_Crafting.sqlite; sourceTree = "<group>"; };
+		848D9B2414871D9D004AD149 /* PotionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotionDetailViewController.h; sourceTree = "<group>"; };
+		848D9B2514871D9D004AD149 /* PotionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PotionDetailViewController.m; sourceTree = "<group>"; };
 		84DA2B091478188F000075AC /* Skyrim Crafting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skyrim Crafting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DA2B0D1478188F000075AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DA2B0F1478188F000075AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 				84DA2B2814781890000075AC /* DetailViewController.m */,
 				8464134D1485D00000922D4A /* PotionsViewController.h */,
 				8464134E1485D00000922D4A /* PotionsViewController.m */,
+				848D9B2414871D9D004AD149 /* PotionDetailViewController.h */,
+				848D9B2514871D9D004AD149 /* PotionDetailViewController.m */,
 				846413511485D16800922D4A /* IngredientsViewController.h */,
 				846413521485D16800922D4A /* IngredientsViewController.m */,
 				846413731485EF3300922D4A /* IngredientDetailViewController.h */,
@@ -241,6 +246,7 @@
 				8464136F1485EE0100922D4A /* Equipment.m in Sources */,
 				846413721485EE4A00922D4A /* Effect.m in Sources */,
 				846413751485EF3300922D4A /* IngredientDetailViewController.m in Sources */,
+				848D9B2614871D9D004AD149 /* PotionDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
