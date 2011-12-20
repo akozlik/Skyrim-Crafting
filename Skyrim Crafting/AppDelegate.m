@@ -10,6 +10,8 @@
 
 #import "PotionsViewController.h"
 #import "IngredientsViewController.h"
+#import "ArmorsViewController.h"
+#import "WeaponsViewController.h"
 #import "MasterViewController.h"
 
 @implementation AppDelegate
@@ -44,13 +46,29 @@
     potionsViewController.managedObjectContext = self.managedObjectContext;
     navController = [[UINavigationController alloc] initWithRootViewController:potionsViewController];
     navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    navController.tabBarItem.image = [[UIImage imageNamed:@"91-beaker-2.png"] autorelease];
     [tabViews addObject:navController];
     
     IngredientsViewController *ingredientsViewController = [[[IngredientsViewController alloc] init] autorelease];
     ingredientsViewController.managedObjectContext = self.managedObjectContext;
     navController = [[UINavigationController alloc] initWithRootViewController:ingredientsViewController];
     navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    navController.tabBarItem.image = [[UIImage imageNamed:@"224-flower.png"] autorelease];
     [tabViews addObject:navController];
+    
+    ArmorsViewController *armorsViewController = [[[ArmorsViewController alloc] init] autorelease];
+    armorsViewController.managedObjectContext = self.managedObjectContext;
+    navController = [[UINavigationController alloc] initWithRootViewController:armorsViewController];
+    navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    navController.tabBarItem.image = [[UIImage imageNamed:@"134-viking.png"] autorelease];
+    [tabViews addObject:navController];    
+    
+    WeaponsViewController *weaponsViewController = [[[WeaponsViewController alloc] init] autorelease];
+    weaponsViewController.managedObjectContext = self.managedObjectContext;
+    navController = [[UINavigationController alloc] initWithRootViewController:weaponsViewController];
+    navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    navController.tabBarItem.image = [[UIImage imageNamed:@"251-sword.png"] autorelease];
+    [tabViews addObject:navController];    
     
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
     masterViewController.managedObjectContext = self.managedObjectContext;

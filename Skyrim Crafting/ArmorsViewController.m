@@ -1,16 +1,17 @@
 //
-//  PotionsViewController.m
+//  ArmorsViewController.m
 //  Skyrim Crafting
 //
-//  Created by Andrew on 11/29/11.
+//  Created by Andrew on 12/4/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PotionsViewController.h"
-#import "PotionDetailViewController.h"
+#import "ArmorsViewController.h"
+#import "EquipmentDetailViewController.h"
+#import "Equipment.h"
 
 
-@implementation PotionsViewController
+@implementation ArmorsViewController
 
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
@@ -19,7 +20,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"Potions";
+        self.title = @"Armor";
         // Custom initialization
     }
     return self;
@@ -38,7 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -84,11 +84,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+    // Return the number of sections.
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // Return the number of rows in the section.
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
@@ -102,17 +104,11 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-
+    
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
-      
+    
     return cell;
-}
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -121,41 +117,47 @@
         return __fetchedResultsController;
     }
     
-       // Set up the fetched results controller.
-       // Create the fetch request for the entity.
-       NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-       // Edit the entity name as appropriate.
-       NSEntityDescription *entity = [NSEntityDescription entityForName:@"Potion" inManagedObjectContext:self.managedObjectContext];
-       [fetchRequest setEntity:entity];
-       
-       // Set the batch size to a suitable number.
-       [fetchRequest setFetchBatchSize:20];
-       
-       // Edit the sort key as appropriate.
-       NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
-       NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
-       
-       [fetchRequest setSortDescriptors:sortDescriptors];
-       
-       // Edit the section name key path and cache name if appropriate.
-       // nil for section name key path means "no sections".
-       NSFetchedResultsController *aFetchedResultsController = [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Potion"] autorelease];
-       aFetchedResultsController.delegate = self;
-       self.fetchedResultsController = aFetchedResultsController;
-       
-    	NSError *error = nil;
-    	if (![self.fetchedResultsController performFetch:&error]) {
-    	    /*
-    	     Replace this implementation with code to handle the error appropriately.
+    // Set up the fetched results controller.
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Equipment" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
     
-    	     abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-    	     */
-    	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-    	    abort();
-    	}
-       
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type = 'Armor'"];
+    
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Armor"] autorelease];
+
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         */
+        NSLog(@"Super error doing this shit");
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+//        abort();
+    }
+    
     return __fetchedResultsController;
 }    
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -200,34 +202,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSError *error;
-    PotionDetailViewController *detail = [[PotionDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    EquipmentDetailViewController *equipmentDetail = [[EquipmentDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *potionName = [managedObject valueForKey:@"name"];
+    Equipment *equipment = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    equipmentDetail.equipment = equipment;
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Ingredient" inManagedObjectContext:self.managedObjectContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:
-                                     @"primary.name = %@ or secondary.name = %@ or tertiary.name = %@ or quaternary.name = %@", potionName, potionName,potionName, potionName];
-    
-    [request setPredicate:predicate];
-    [request setEntity:entity];
-
-    NSArray *ingredientsArray = [self.managedObjectContext executeFetchRequest:request error:&error];
-    
-    [predicate release];
-
-    detail.ingredients = ingredientsArray;
-    detail.title = [managedObject valueForKey:@"name"];
-    [self.navigationController pushViewController:detail animated:YES];
-    
-}
-
--(void)dealloc
-{
-//    [objects release];
-    [super dealloc];
+    [self.navigationController pushViewController:equipmentDetail animated:YES];
 }
 
 @end
