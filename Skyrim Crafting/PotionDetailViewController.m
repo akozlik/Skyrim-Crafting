@@ -125,6 +125,7 @@
     
     cell.detailTextLabel.text = detailLabel;
     cell.textLabel.text = ingredient.name;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     // Configure the cell...
     

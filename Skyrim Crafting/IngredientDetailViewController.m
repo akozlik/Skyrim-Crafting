@@ -145,6 +145,7 @@
     }
     
     // Configure the cell...
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
