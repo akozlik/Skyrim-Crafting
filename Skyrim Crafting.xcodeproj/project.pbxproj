@@ -15,7 +15,6 @@
 		8464136F1485EE0100922D4A /* Equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464136E1485EE0100922D4A /* Equipment.m */; };
 		846413721485EE4A00922D4A /* Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413711485EE4A00922D4A /* Effect.m */; };
 		846413751485EF3300922D4A /* IngredientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413741485EF3300922D4A /* IngredientDetailViewController.m */; };
-		84736EF41498650100BA49A5 /* Skyrim_Crafting.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 84736EF31498650100BA49A5 /* Skyrim_Crafting.sqlite */; };
 		84736EF714986A4400BA49A5 /* WeaponsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84736EF614986A4400BA49A5 /* WeaponsViewController.m */; };
 		8474C0ED148C6C1B008601D6 /* ArmorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474C0EC148C6C1B008601D6 /* ArmorsViewController.m */; };
 		848D9B2614871D9D004AD149 /* PotionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D9B2514871D9D004AD149 /* PotionDetailViewController.m */; };
@@ -28,6 +27,11 @@
 		84AEEC4514A043D8009E9AA2 /* 251-sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC4314A043D8009E9AA2 /* 251-sword.png */; };
 		84AEEC4614A043D8009E9AA2 /* 251-sword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC4414A043D8009E9AA2 /* 251-sword@2x.png */; };
 		84AEEC4914A04427009E9AA2 /* EquipmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEEC4814A04427009E9AA2 /* EquipmentDetailViewController.m */; };
+		84AEEC4E14A176D0009E9AA2 /* ComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEEC4D14A176D0009E9AA2 /* ComponentViewController.m */; };
+		84AEEC5314A17881009E9AA2 /* ComponentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEEC5214A17881009E9AA2 /* ComponentDetailViewController.m */; };
+		84AEEC5614A17AAB009E9AA2 /* 181-hammer.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5414A17AAB009E9AA2 /* 181-hammer.png */; };
+		84AEEC5714A17AAB009E9AA2 /* 181-hammer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5514A17AAB009E9AA2 /* 181-hammer@2x.png */; };
+		84AEEC5914A19906009E9AA2 /* Skyrim_Crafting.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5814A19906009E9AA2 /* Skyrim_Crafting.sqlite */; };
 		84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0D1478188F000075AC /* UIKit.framework */; };
 		84DA2B101478188F000075AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0F1478188F000075AC /* Foundation.framework */; };
 		84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B111478188F000075AC /* CoreGraphics.framework */; };
@@ -59,7 +63,6 @@
 		846413711485EE4A00922D4A /* Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Effect.m; sourceTree = "<group>"; };
 		846413731485EF3300922D4A /* IngredientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientDetailViewController.h; sourceTree = "<group>"; };
 		846413741485EF3300922D4A /* IngredientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientDetailViewController.m; sourceTree = "<group>"; };
-		84736EF31498650100BA49A5 /* Skyrim_Crafting.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skyrim_Crafting.sqlite; sourceTree = "<group>"; };
 		84736EF514986A4400BA49A5 /* WeaponsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponsViewController.h; sourceTree = "<group>"; };
 		84736EF614986A4400BA49A5 /* WeaponsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponsViewController.m; sourceTree = "<group>"; };
 		8474C0EB148C6C1B008601D6 /* ArmorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArmorsViewController.h; sourceTree = "<group>"; };
@@ -76,6 +79,13 @@
 		84AEEC4414A043D8009E9AA2 /* 251-sword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "251-sword@2x.png"; sourceTree = "<group>"; };
 		84AEEC4714A04427009E9AA2 /* EquipmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentDetailViewController.h; sourceTree = "<group>"; };
 		84AEEC4814A04427009E9AA2 /* EquipmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentDetailViewController.m; sourceTree = "<group>"; };
+		84AEEC4C14A176CF009E9AA2 /* ComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentViewController.h; sourceTree = "<group>"; };
+		84AEEC4D14A176D0009E9AA2 /* ComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentViewController.m; sourceTree = "<group>"; };
+		84AEEC5114A17881009E9AA2 /* ComponentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentDetailViewController.h; sourceTree = "<group>"; };
+		84AEEC5214A17881009E9AA2 /* ComponentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentDetailViewController.m; sourceTree = "<group>"; };
+		84AEEC5414A17AAB009E9AA2 /* 181-hammer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "181-hammer.png"; sourceTree = "<group>"; };
+		84AEEC5514A17AAB009E9AA2 /* 181-hammer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "181-hammer@2x.png"; sourceTree = "<group>"; };
+		84AEEC5814A19906009E9AA2 /* Skyrim_Crafting.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skyrim_Crafting.sqlite; sourceTree = "<group>"; };
 		84DA2B091478188F000075AC /* Skyrim Crafting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skyrim Crafting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DA2B0D1478188F000075AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DA2B0F1478188F000075AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +128,8 @@
 				84AEEC3C14A04381009E9AA2 /* 134-viking@2x.png */,
 				84AEEC3714A04300009E9AA2 /* 91-beaker-2.png */,
 				84AEEC3814A04300009E9AA2 /* 91-beaker-2@2x.png */,
+				84AEEC5414A17AAB009E9AA2 /* 181-hammer.png */,
+				84AEEC5514A17AAB009E9AA2 /* 181-hammer@2x.png */,
 				84AEEC3F14A043B6009E9AA2 /* 224-flower.png */,
 				84AEEC4014A043B6009E9AA2 /* 224-flower@2x.png */,
 				84AEEC4314A043D8009E9AA2 /* 251-sword.png */,
@@ -160,8 +172,6 @@
 				84AEEC3514A042F3009E9AA2 /* Images */,
 				84DA2B1E14781890000075AC /* AppDelegate.h */,
 				84DA2B1F14781890000075AC /* AppDelegate.m */,
-				84AEEC4714A04427009E9AA2 /* EquipmentDetailViewController.h */,
-				84AEEC4814A04427009E9AA2 /* EquipmentDetailViewController.m */,
 				84DA2B2414781890000075AC /* MasterViewController.h */,
 				84DA2B2514781890000075AC /* MasterViewController.m */,
 				84DA2B2714781890000075AC /* DetailViewController.h */,
@@ -183,6 +193,12 @@
 				8474C0EC148C6C1B008601D6 /* ArmorsViewController.m */,
 				84736EF514986A4400BA49A5 /* WeaponsViewController.h */,
 				84736EF614986A4400BA49A5 /* WeaponsViewController.m */,
+				84AEEC4714A04427009E9AA2 /* EquipmentDetailViewController.h */,
+				84AEEC4814A04427009E9AA2 /* EquipmentDetailViewController.m */,
+				84AEEC4C14A176CF009E9AA2 /* ComponentViewController.h */,
+				84AEEC4D14A176D0009E9AA2 /* ComponentViewController.m */,
+				84AEEC5114A17881009E9AA2 /* ComponentDetailViewController.h */,
+				84AEEC5214A17881009E9AA2 /* ComponentDetailViewController.m */,
 			);
 			path = "Skyrim Crafting";
 			sourceTree = "<group>";
@@ -190,7 +206,7 @@
 		84DA2B1614781890000075AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84736EF31498650100BA49A5 /* Skyrim_Crafting.sqlite */,
+				84AEEC5814A19906009E9AA2 /* Skyrim_Crafting.sqlite */,
 				84DA2B1714781890000075AC /* Skyrim Crafting-Info.plist */,
 				84DA2B1814781890000075AC /* InfoPlist.strings */,
 				84DA2B1B14781890000075AC /* main.m */,
@@ -269,7 +285,6 @@
 				84DA2B1A14781890000075AC /* InfoPlist.strings in Resources */,
 				84DA2B2C14781890000075AC /* MasterViewController.xib in Resources */,
 				84DA2B2F14781890000075AC /* DetailViewController.xib in Resources */,
-				84736EF41498650100BA49A5 /* Skyrim_Crafting.sqlite in Resources */,
 				84AEEC3914A04300009E9AA2 /* 91-beaker-2.png in Resources */,
 				84AEEC3A14A04300009E9AA2 /* 91-beaker-2@2x.png in Resources */,
 				84AEEC3D14A04381009E9AA2 /* 134-viking.png in Resources */,
@@ -278,6 +293,9 @@
 				84AEEC4214A043B6009E9AA2 /* 224-flower@2x.png in Resources */,
 				84AEEC4514A043D8009E9AA2 /* 251-sword.png in Resources */,
 				84AEEC4614A043D8009E9AA2 /* 251-sword@2x.png in Resources */,
+				84AEEC5614A17AAB009E9AA2 /* 181-hammer.png in Resources */,
+				84AEEC5714A17AAB009E9AA2 /* 181-hammer@2x.png in Resources */,
+				84AEEC5914A19906009E9AA2 /* Skyrim_Crafting.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +323,8 @@
 				8474C0ED148C6C1B008601D6 /* ArmorsViewController.m in Sources */,
 				84736EF714986A4400BA49A5 /* WeaponsViewController.m in Sources */,
 				84AEEC4914A04427009E9AA2 /* EquipmentDetailViewController.m in Sources */,
+				84AEEC4E14A176D0009E9AA2 /* ComponentViewController.m in Sources */,
+				84AEEC5314A17881009E9AA2 /* ComponentDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

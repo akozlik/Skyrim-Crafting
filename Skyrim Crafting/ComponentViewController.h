@@ -1,20 +1,16 @@
 //
-//  EquipmentDetailViewController.h
+//  ComponentViewController.h
 //  Skyrim Crafting
 //
-//  Created by Andrew on 12/19/11.
+//  Created by Andrew on 12/20/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Equipment.h"
 
-@interface EquipmentDetailViewController : UITableViewController
+@interface ComponentViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) Equipment *equipment;
-
-@property (nonatomic, retain) NSArray *components;
 
 @end

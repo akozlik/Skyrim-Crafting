@@ -205,7 +205,9 @@
     EquipmentDetailViewController *equipmentDetail = [[EquipmentDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
     Equipment *equipment = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSLog(@"Selected: %@", [equipment description]);
     equipmentDetail.equipment = equipment;
+    equipmentDetail.managedObjectContext = self.managedObjectContext;
     
     [self.navigationController pushViewController:equipmentDetail animated:YES];
 }

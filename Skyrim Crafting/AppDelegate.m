@@ -13,6 +13,7 @@
 #import "ArmorsViewController.h"
 #import "WeaponsViewController.h"
 #import "MasterViewController.h"
+#import "ComponentViewController.h"
 
 @implementation AppDelegate
 
@@ -70,10 +71,11 @@
     navController.tabBarItem.image = [[UIImage imageNamed:@"251-sword.png"] autorelease];
     [tabViews addObject:navController];    
     
-    MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
-    masterViewController.managedObjectContext = self.managedObjectContext;
-    navController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    ComponentViewController *componentViewController = [[[ComponentViewController alloc] init] autorelease];
+    componentViewController.managedObjectContext = self.managedObjectContext;
+    navController = [[UINavigationController alloc] initWithRootViewController:componentViewController];
     navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    navController.tabBarItem.image = [[UIImage imageNamed:@"181-hammer.png"] autorelease];
     [tabViews addObject:navController];
 
     self.tabController = [[UITabBarController alloc] init];

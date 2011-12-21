@@ -1,27 +1,26 @@
 //
-//  EquipmentDetailViewController.m
+//  ComponentViewController.m
 //  Skyrim Crafting
 //
-//  Created by Andrew on 12/19/11.
+//  Created by Andrew on 12/20/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "EquipmentDetailViewController.h"
-#import "Recipe.h"
+#import "ComponentViewController.h"
+#import "ComponentDetailViewController.h"
 #import "Component.h"
 
-@implementation EquipmentDetailViewController
+@implementation ComponentViewController
 
-@synthesize fetchedResultsController, managedObjectContext;
-@synthesize equipment, components;
+@synthesize fetchedResultsController = __fetchedResultsController;
+@synthesize managedObjectContext = __managedObjectContext;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-
+        self.title = @"Components";
     }
-
     return self;
 }
 
@@ -56,22 +55,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.title = equipment.name;
-    NSLog(@"Detail Will Appear");
-    NSError *error;
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:
-                              @"equipment = %@", equipment];
-    
-    [request setPredicate:predicate];
-    [request setEntity:entity];
-    
-    self.components = [self.managedObjectContext executeFetchRequest:request error:&error];
-    NSLog(@"Components size: %d", [components count]);
-    [predicate release];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -99,18 +82,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 2;
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Detail num rows in section");
-    // Return the number of rows in the section.
-    if (section == 0)
-        return [self.components count];
-    else
-        return 2;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,32 +97,57 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
-    }
-
-    if (indexPath.section == 0)
-    {
-        Recipe *recipe = [self.components objectAtIndex:indexPath.row];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", [recipe.quanity stringValue], recipe.component.name];
-    } else if (indexPath.section == 1)
-    {
-        switch (indexPath.row)
-        {
-            case 0:
-                cell.textLabel.text = @"weight";
-                cell.detailTextLabel.text = [equipment.weight stringValue];
-                break;
-            case 1:
-                cell.textLabel.text = @"value";
-                cell.detailTextLabel.text = [equipment.value stringValue];
-                break;
-        }
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
     
     return cell;
 }
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (__fetchedResultsController != nil) {
+        return __fetchedResultsController;
+    }
+    
+    // Set up the fetched results controller.
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Component" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Component"] autorelease];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return __fetchedResultsController;
+}    
 
 /*
 // Override to support conditional editing of the table view.
@@ -189,14 +192,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    ComponentDetailViewController *componentDetail = [[ComponentDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    
+    Component *component = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    componentDetail.component = component;
+
+    [self.navigationController pushViewController:componentDetail animated:YES];
 }
 
 @end
