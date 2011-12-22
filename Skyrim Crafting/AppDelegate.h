@@ -17,6 +17,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (void)saveContext;
+- (void)generateInterface;
 - (NSURL *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) UINavigationController *navigationController;

@@ -110,7 +110,7 @@
     if (section == 0)
         return [self.components count];
     else
-        return 2;
+        return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -131,13 +131,19 @@
         switch (indexPath.row)
         {
             case 0:
+                if ([equipment.type isEqualToString:@"Armor"])
+                    cell.textLabel.text = @"rating";
+                else
+                    cell.textLabel.text = @"damage";
+                cell.detailTextLabel.text = [equipment.rating stringValue];
+                break;
+            case 1:
                 cell.textLabel.text = @"weight";
                 cell.detailTextLabel.text = [equipment.weight stringValue];
                 break;
-            case 1:
+            case 2:
                 cell.textLabel.text = @"value";
                 cell.detailTextLabel.text = [equipment.value stringValue];
-                break;
         }
     }
     

@@ -202,9 +202,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Equipment *equipment = [self.fetchedResultsController objectAtIndexPath:indexPath];
     EquipmentDetailViewController *equipmentDetail = [[EquipmentDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    
+    Equipment *equipment = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
     equipmentDetail.equipment = equipment;
+    equipmentDetail.managedObjectContext = self.managedObjectContext;
+    
     [self.navigationController pushViewController:equipmentDetail animated:YES];
 }
 

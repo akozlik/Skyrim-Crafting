@@ -31,7 +31,7 @@
 		84AEEC5314A17881009E9AA2 /* ComponentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEEC5214A17881009E9AA2 /* ComponentDetailViewController.m */; };
 		84AEEC5614A17AAB009E9AA2 /* 181-hammer.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5414A17AAB009E9AA2 /* 181-hammer.png */; };
 		84AEEC5714A17AAB009E9AA2 /* 181-hammer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5514A17AAB009E9AA2 /* 181-hammer@2x.png */; };
-		84AEEC5914A19906009E9AA2 /* Skyrim_Crafting.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5814A19906009E9AA2 /* Skyrim_Crafting.sqlite */; };
+		84AEEC5D14A2DAC5009E9AA2 /* Skyrim_Crafting.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 84AEEC5C14A2DAC5009E9AA2 /* Skyrim_Crafting.sqlite */; };
 		84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0D1478188F000075AC /* UIKit.framework */; };
 		84DA2B101478188F000075AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B0F1478188F000075AC /* Foundation.framework */; };
 		84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DA2B111478188F000075AC /* CoreGraphics.framework */; };
@@ -85,7 +85,7 @@
 		84AEEC5214A17881009E9AA2 /* ComponentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentDetailViewController.m; sourceTree = "<group>"; };
 		84AEEC5414A17AAB009E9AA2 /* 181-hammer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "181-hammer.png"; sourceTree = "<group>"; };
 		84AEEC5514A17AAB009E9AA2 /* 181-hammer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "181-hammer@2x.png"; sourceTree = "<group>"; };
-		84AEEC5814A19906009E9AA2 /* Skyrim_Crafting.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skyrim_Crafting.sqlite; sourceTree = "<group>"; };
+		84AEEC5C14A2DAC5009E9AA2 /* Skyrim_Crafting.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Skyrim_Crafting.sqlite; sourceTree = "<group>"; };
 		84DA2B091478188F000075AC /* Skyrim Crafting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skyrim Crafting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DA2B0D1478188F000075AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84DA2B0F1478188F000075AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -206,7 +206,7 @@
 		84DA2B1614781890000075AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84AEEC5814A19906009E9AA2 /* Skyrim_Crafting.sqlite */,
+				84AEEC5C14A2DAC5009E9AA2 /* Skyrim_Crafting.sqlite */,
 				84DA2B1714781890000075AC /* Skyrim Crafting-Info.plist */,
 				84DA2B1814781890000075AC /* InfoPlist.strings */,
 				84DA2B1B14781890000075AC /* main.m */,
@@ -295,7 +295,7 @@
 				84AEEC4614A043D8009E9AA2 /* 251-sword@2x.png in Resources */,
 				84AEEC5614A17AAB009E9AA2 /* 181-hammer.png in Resources */,
 				84AEEC5714A17AAB009E9AA2 /* 181-hammer@2x.png in Resources */,
-				84AEEC5914A19906009E9AA2 /* Skyrim_Crafting.sqlite in Resources */,
+				84AEEC5D14A2DAC5009E9AA2 /* Skyrim_Crafting.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
