@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) Component *component;
+@property (nonatomic, retain) NSArray *components;
 
 
 @end

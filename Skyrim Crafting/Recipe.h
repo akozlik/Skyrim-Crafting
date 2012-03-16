@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Equipment.h"
 
 @class Component;
 
@@ -15,6 +16,6 @@
 
 @property (nonatomic, retain) NSNumber * quanity;
 @property (nonatomic, retain) Component *component;
-@property (nonatomic, retain) NSManagedObject *equipment;
+@property (nonatomic, retain) Equipment *equipment;
 
 @end

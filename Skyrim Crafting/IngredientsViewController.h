@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "GADBannerView.h"
 
 @interface IngredientsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+{
+    GADBannerView *bannerView_;
+}
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) GADBannerView *bannerView_;
 
 
 @end

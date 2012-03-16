@@ -7,12 +7,14 @@
 //
 
 #import "Component.h"
+#import "Recipe.h"
+#import "Equipment.h"
 #import "ComponentDetailViewController.h"
 
 @implementation ComponentDetailViewController
 
 @synthesize fetchedResultsController, managedObjectContext;
-@synthesize component;
+@synthesize component, components;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +39,9 @@
 {
     [super viewDidLoad];
 
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.window.frame.size.width, 50)] autorelease];
+    self.tableView.tableFooterView = view;
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -54,12 +59,30 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.title = component.name;
+    
+    NSError *error;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"equipment.name" ascending:YES] autorelease];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"component = %@", component];
+    [fetchRequest setPredicate:predicate];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    self.components = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.title = component.name;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -84,14 +107,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.components count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,8 +123,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
+    
+    Recipe *recipe = [self.components objectAtIndex:indexPath.row];
+
+    cell.textLabel.text = recipe.equipment.name;
+    cell.detailTextLabel.text = recipe.equipment.type;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     // Configure the cell...
     

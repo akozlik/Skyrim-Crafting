@@ -15,6 +15,7 @@
 
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize bannerView_;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,6 +40,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    bannerView_ = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0, 
+                                                                  self.view.frame.size.height - 78, 
+                                                                  GAD_SIZE_320x50.width,
+                                                                  GAD_SIZE_320x50.height)];
+    bannerView_.adUnitID = @"a14f61066111615";
+    bannerView_.rootViewController = self;
+    [self.navigationController.view addSubview:bannerView_];
+    [bannerView_ loadRequest:[GADRequest request]];
+    
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.window.frame.size.width, 50)] autorelease];
+    self.tableView.tableFooterView = view;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

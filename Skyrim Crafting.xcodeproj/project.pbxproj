@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84508F68151140960026D3BC /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84508F67151140960026D3BC /* libGoogleAdMobAds.a */; };
+		84508F6B151140DC0026D3BC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84508F6A151140DC0026D3BC /* AudioToolbox.framework */; };
+		84508F6D151140E70026D3BC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84508F6C151140E70026D3BC /* MessageUI.framework */; };
+		84508F70151141870026D3BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84508F6E151140F50026D3BC /* SystemConfiguration.framework */; };
+		84508F821513AFE40026D3BC /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 84508F7E1513AFE40026D3BC /* Icon-72.png */; };
+		84508F831513AFE40026D3BC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84508F7F1513AFE40026D3BC /* Icon.png */; };
+		84508F841513AFE40026D3BC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84508F801513AFE40026D3BC /* Icon@2x.png */; };
+		84508F851513AFE40026D3BC /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 84508F811513AFE40026D3BC /* iTunesArtwork.png */; };
 		8464134F1485D00000922D4A /* PotionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464134E1485D00000922D4A /* PotionsViewController.m */; };
 		846413531485D16800922D4A /* IngredientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413521485D16800922D4A /* IngredientsViewController.m */; };
 		846413631485EE0100922D4A /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 846413621485EE0100922D4A /* Component.m */; };
@@ -47,6 +55,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84508F61151140960026D3BC /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = "Skyrim Crafting.xcodeproj/GADBannerView.h"; sourceTree = SOURCE_ROOT; };
+		84508F62151140960026D3BC /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = "Skyrim Crafting.xcodeproj/GADBannerViewDelegate.h"; sourceTree = SOURCE_ROOT; };
+		84508F63151140960026D3BC /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = "Skyrim Crafting.xcodeproj/GADInterstitial.h"; sourceTree = SOURCE_ROOT; };
+		84508F64151140960026D3BC /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = "Skyrim Crafting.xcodeproj/GADInterstitialDelegate.h"; sourceTree = SOURCE_ROOT; };
+		84508F65151140960026D3BC /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = "Skyrim Crafting.xcodeproj/GADRequest.h"; sourceTree = SOURCE_ROOT; };
+		84508F66151140960026D3BC /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = "Skyrim Crafting.xcodeproj/GADRequestError.h"; sourceTree = SOURCE_ROOT; };
+		84508F67151140960026D3BC /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "Skyrim Crafting.xcodeproj/libGoogleAdMobAds.a"; sourceTree = SOURCE_ROOT; };
+		84508F6A151140DC0026D3BC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		84508F6C151140E70026D3BC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		84508F6E151140F50026D3BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		84508F7E1513AFE40026D3BC /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		84508F7F1513AFE40026D3BC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		84508F801513AFE40026D3BC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		84508F811513AFE40026D3BC /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		8464134D1485D00000922D4A /* PotionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotionsViewController.h; sourceTree = "<group>"; };
 		8464134E1485D00000922D4A /* PotionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PotionsViewController.m; sourceTree = "<group>"; };
 		846413511485D16800922D4A /* IngredientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsViewController.h; sourceTree = "<group>"; };
@@ -111,19 +133,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84508F70151141870026D3BC /* SystemConfiguration.framework in Frameworks */,
+				84508F6D151140E70026D3BC /* MessageUI.framework in Frameworks */,
+				84508F6B151140DC0026D3BC /* AudioToolbox.framework in Frameworks */,
 				84DA2B0E1478188F000075AC /* UIKit.framework in Frameworks */,
 				84DA2B101478188F000075AC /* Foundation.framework in Frameworks */,
 				84DA2B121478188F000075AC /* CoreGraphics.framework in Frameworks */,
 				84DA2B1414781890000075AC /* CoreData.framework in Frameworks */,
+				84508F68151140960026D3BC /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84508F691511409A0026D3BC /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				84508F61151140960026D3BC /* GADBannerView.h */,
+				84508F62151140960026D3BC /* GADBannerViewDelegate.h */,
+				84508F63151140960026D3BC /* GADInterstitial.h */,
+				84508F64151140960026D3BC /* GADInterstitialDelegate.h */,
+				84508F65151140960026D3BC /* GADRequest.h */,
+				84508F66151140960026D3BC /* GADRequestError.h */,
+				84508F67151140960026D3BC /* libGoogleAdMobAds.a */,
+			);
+			name = Admob;
+			sourceTree = "<group>";
+		};
+		84508F751513AEDF0026D3BC /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				84508F7E1513AFE40026D3BC /* Icon-72.png */,
+				84508F7F1513AFE40026D3BC /* Icon.png */,
+				84508F801513AFE40026D3BC /* Icon@2x.png */,
+				84508F811513AFE40026D3BC /* iTunesArtwork.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		84AEEC3514A042F3009E9AA2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84508F751513AEDF0026D3BC /* Icons */,
 				84AEEC3B14A04381009E9AA2 /* 134-viking.png */,
 				84AEEC3C14A04381009E9AA2 /* 134-viking@2x.png */,
 				84AEEC3714A04300009E9AA2 /* 91-beaker-2.png */,
@@ -141,6 +193,9 @@
 		84DA2AFE1478188F000075AC = {
 			isa = PBXGroup;
 			children = (
+				84508F6E151140F50026D3BC /* SystemConfiguration.framework */,
+				84508F6C151140E70026D3BC /* MessageUI.framework */,
+				84508F6A151140DC0026D3BC /* AudioToolbox.framework */,
 				84DA2B1514781890000075AC /* Skyrim Crafting */,
 				84DA2B0C1478188F000075AC /* Frameworks */,
 				84DA2B0A1478188F000075AC /* Products */,
@@ -169,6 +224,7 @@
 		84DA2B1514781890000075AC /* Skyrim Crafting */ = {
 			isa = PBXGroup;
 			children = (
+				84508F691511409A0026D3BC /* Admob */,
 				84AEEC3514A042F3009E9AA2 /* Images */,
 				84DA2B1E14781890000075AC /* AppDelegate.h */,
 				84DA2B1F14781890000075AC /* AppDelegate.m */,
@@ -296,6 +352,10 @@
 				84AEEC5614A17AAB009E9AA2 /* 181-hammer.png in Resources */,
 				84AEEC5714A17AAB009E9AA2 /* 181-hammer@2x.png in Resources */,
 				84AEEC5D14A2DAC5009E9AA2 /* Skyrim_Crafting.sqlite in Resources */,
+				84508F821513AFE40026D3BC /* Icon-72.png in Resources */,
+				84508F831513AFE40026D3BC /* Icon.png in Resources */,
+				84508F841513AFE40026D3BC /* Icon@2x.png in Resources */,
+				84508F851513AFE40026D3BC /* iTunesArtwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +437,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -394,7 +454,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -404,10 +464,19 @@
 		84DA2B3314781890000075AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Andrew Kozlik";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andrew Kozlik";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Skyrim Crafting/Skyrim Crafting-Prefix.pch";
 				INFOPLIST_FILE = "Skyrim Crafting/Skyrim Crafting-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/Skyrim Crafting.xcodeproj\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,10 +484,19 @@
 		84DA2B3414781890000075AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Andrew Kozlik";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andrew Kozlik";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Skyrim Crafting/Skyrim Crafting-Prefix.pch";
 				INFOPLIST_FILE = "Skyrim Crafting/Skyrim Crafting-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/Skyrim Crafting.xcodeproj\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

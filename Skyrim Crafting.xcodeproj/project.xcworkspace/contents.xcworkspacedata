@@ -2,6 +2,27 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GADBannerView.h">
+   </FileRef>
+   <FileRef
+      location = "group:GADBannerViewDelegate.h">
+   </FileRef>
+   <FileRef
+      location = "group:GADInterstitial.h">
+   </FileRef>
+   <FileRef
+      location = "group:GADInterstitialDelegate.h">
+   </FileRef>
+   <FileRef
+      location = "group:GADRequest.h">
+   </FileRef>
+   <FileRef
+      location = "group:GADRequestError.h">
+   </FileRef>
+   <FileRef
+      location = "group:libGoogleAdMobAds.a">
+   </FileRef>
+   <FileRef
       location = "self:Skyrim Crafting.xcodeproj">
    </FileRef>
 </Workspace>

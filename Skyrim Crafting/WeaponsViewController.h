@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GADBannerView.h"
 
 @interface WeaponsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+{
+    GADBannerView *bannerView_;
+}
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) GADBannerView *bannerView_;
 
 @end

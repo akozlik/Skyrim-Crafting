@@ -11,11 +11,16 @@
 @class DetailViewController;
 
 #import <CoreData/CoreData.h>
+#import "GADBannerView.h"
 
 @interface PotionsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+{
+    GADBannerView *bannerView_;
+}
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) GADBannerView *bannerView_;
 
 
 @end

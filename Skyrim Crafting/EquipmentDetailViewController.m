@@ -38,6 +38,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.window.frame.size.width, 50)] autorelease];
+    self.tableView.tableFooterView = view;
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -57,7 +61,6 @@
 {
     [super viewWillAppear:animated];
     self.title = equipment.name;
-    NSLog(@"Detail Will Appear");
     NSError *error;
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -69,7 +72,7 @@
     [request setEntity:entity];
     
     self.components = [self.managedObjectContext executeFetchRequest:request error:&error];
-    NSLog(@"Components size: %d", [components count]);
+
     [predicate release];
 
 }
@@ -125,6 +128,7 @@
     if (indexPath.section == 0)
     {
         Recipe *recipe = [self.components objectAtIndex:indexPath.row];
+
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", [recipe.quanity stringValue], recipe.component.name];
     } else if (indexPath.section == 1)
     {

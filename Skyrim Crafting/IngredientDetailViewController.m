@@ -37,6 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.window.frame.size.width, 50)] autorelease];
+    self.tableView.tableFooterView = view;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
