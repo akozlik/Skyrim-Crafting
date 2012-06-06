@@ -461,7 +461,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -478,7 +478,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -488,19 +488,22 @@
 		84DA2B3314781890000075AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Andrew Kozlik";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andrew Kozlik";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Skyrim Crafting/Skyrim Crafting-Prefix.pch";
 				INFOPLIST_FILE = "Skyrim Crafting/Skyrim Crafting-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/Skyrim Crafting.xcodeproj\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -508,19 +511,22 @@
 		84DA2B3414781890000075AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Andrew Kozlik";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andrew Kozlik";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Skyrim Crafting/Skyrim Crafting-Prefix.pch";
 				INFOPLIST_FILE = "Skyrim Crafting/Skyrim Crafting-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/Skyrim Crafting.xcodeproj\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "49E928D1-F367-45F1-9E89-F775E8AA65C7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
